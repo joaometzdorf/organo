@@ -17,7 +17,7 @@ function App() {
     },
     {
       nome: "Data Science",
-      corPrimaria: "#E8F8FF",
+      corPrimaria: "#A6D157",
       corSecundaria: "#F0F8E2",
     },
     {
@@ -53,12 +53,22 @@ function App() {
     <div className="App">
       <Banner />
       <Formulario
-        aoColaboradorCadastrado={(colaborador) => aoNovoColaboradorAdicionado(colaborador)}
-        times={times.map(time => time.nome)}
+        aoColaboradorCadastrado={(colaborador) =>
+          aoNovoColaboradorAdicionado(colaborador)
+        }
+        times={times.map((time) => time.nome)}
       />
 
       {times.map((time) => {
-        return <Time key={time.nome} nome={time.nome} corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria} />;
+        return (
+          <Time
+            key={time.nome}
+            nome={time.nome}
+            corPrimaria={time.corPrimaria}
+            corSecundaria={time.corSecundaria}
+            colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+          />
+        );
       })}
     </div>
   );

@@ -5,7 +5,6 @@ import ListaSuspensa from "../ListaSuspensa";
 import "./Formulario.css";
 
 const Formulario = (props) => {
-
   const [nome, setNome] = useState("");
   const [cargo, setCargo] = useState("");
   const [imagem, setImagem] = useState("");
@@ -17,8 +16,12 @@ const Formulario = (props) => {
       nome,
       cargo,
       imagem,
-      time
-    })
+      time,
+    });
+    setNome("");
+    setCargo("");
+    setImagem("");
+    setTime("");
   };
 
   return (
