@@ -1,3 +1,4 @@
+import Colaborador from "../Colaborador";
 import "./Time.css";
 
 const Time = (props) => {
