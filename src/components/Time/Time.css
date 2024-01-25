@@ -5,9 +5,15 @@
 
 .time h3 {
     font-size: 2rem;
-    border-bottom: 4px solid;
-    display: inline-block;
     padding-bottom: .5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.time .border__bottom {
+    width: 32px;
+    height: 4px;
 }
 
 .time .colaboradores {

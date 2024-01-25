@@ -8,7 +8,10 @@ const Time = (props) => {
         className="time"
         style={{ backgroundColor: props.corSecundaria }}
       >
-        <h3 style={{ borderColor: props.corPrimaria }}>{props.nome}</h3>
+        <h3>
+          {props.nome}
+          <div style={{ backgroundColor: props.corPrimaria }} className="border__bottom"></div>
+        </h3>
         <div className="colaboradores">
           {props.colaboradores.map((colaborador) => (
             <Colaborador
