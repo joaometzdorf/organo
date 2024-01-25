@@ -1,4 +1,4 @@
-.rodape {
+.footer {
     background-color: #6278F7;
     background-image: url(../../../public/images/fundo.png);
     width: 100%;
@@ -8,12 +8,12 @@
     padding: 75px 0;
 }
 
-.rodape .rodape__sociais {
+.footer .footer__sociais {
     display: flex;
     gap: 2rem;
 }
 
-.rodape__autor {
+.footer__autor {
     font-size: 1.25rem;
     font-weight: 500;
     color: #FFFFFF;
