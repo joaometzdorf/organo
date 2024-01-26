@@ -31,23 +31,24 @@ const Formulario = (props) => {
     setCargo("");
     setImagem("");
     setTime("");
+    document.querySelector("form").classList.add("hidden")
   };
 
   return (
-    <section className="formulario">
+    <section className="formulario hidden">
       <form onSubmit={aoSalvar}>
-        <h2>Preencha os dados para criar o card do colaborador.</h2>
+        <h2>Preencha os dados para criar o card do personagem.</h2>
         <CampoTexto
           obrigatorio={true}
           label="Nome"
-          placeholder="Digite o seu nome"
+          placeholder="Digite o nome do personagem"
           valor={nome}
           aoAlterado={(valor) => setNome(valor)}
         />
         <CampoTexto
           obrigatorio={true}
-          label="Cargo"
-          placeholder="Digite seu cargo"
+          label="Anime"
+          placeholder="Digite o anime que ele participa"
           valor={cargo}
           aoAlterado={(valor) => setCargo(valor)}
         />
@@ -60,7 +61,7 @@ const Formulario = (props) => {
         />
         <ListaSuspensa
           obrigatorio={true}
-          label="Time"
+          label="Gênero"
           itens={props.times}
           valor={time}
           aoAlterado={(valor) => setTime(valor)}

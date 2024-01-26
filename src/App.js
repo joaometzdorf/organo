@@ -3,41 +3,82 @@ import Banner from "./components/Banner";
 import Formulario from "./components/Formulario";
 import Time from "./components/Time";
 import Rodape from "./components/Rodape";
+import Adicionar from "./components/Adicionar";
 
 function App() {
   const times = [
     {
-      nome: "Programação",
+      nome: "Romance",
       corPrimaria: "#57C278",
       corSecundaria: "#D9F7E9",
     },
     {
-      nome: "Front-End",
+      nome: "Slice-of-life",
       corPrimaria: "#82CFFA",
       corSecundaria: "#E8F8FF",
     },
     {
-      nome: "Data Science",
+      nome: "Drama",
       corPrimaria: "#A6D157",
       corSecundaria: "#F0F8E2",
     },
     {
-      nome: "Devops",
+      nome: "Comédia",
       corPrimaria: "#E06B69",
       corSecundaria: "#FDE7E8",
     },
     {
-      nome: "UX e Design",
+      nome: "Ficção Científica",
       corPrimaria: "#DB6EBF",
       corSecundaria: "#FAE9F5",
     },
     {
-      nome: "Mobile",
+      nome: "Fantasia",
       corPrimaria: "#FFBA05",
       corSecundaria: "#FFF5D9",
     },
     {
-      nome: "Inovação e Gestão",
+      nome: "Ação",
+      corPrimaria: "#FF8A29",
+      corSecundaria: "#FFEEDF",
+    },
+    {
+      nome: "Suspense",
+      corPrimaria: "#FF8A29",
+      corSecundaria: "#FFEEDF",
+    },
+    {
+      nome: "Aventura",
+      corPrimaria: "#FF8A29",
+      corSecundaria: "#FFEEDF",
+    },
+    {
+      nome: "Música",
+      corPrimaria: "#FF8A29",
+      corSecundaria: "#FFEEDF",
+    },
+    {
+      nome: "Esportes",
+      corPrimaria: "#FF8A29",
+      corSecundaria: "#FFEEDF",
+    },
+    {
+      nome: "Seinen",
+      corPrimaria: "#FF8A29",
+      corSecundaria: "#FFEEDF",
+    },
+    {
+      nome: "Shoujo",
+      corPrimaria: "#FF8A29",
+      corSecundaria: "#FFEEDF",
+    },
+    {
+      nome: "Shounen",
+      corPrimaria: "#FF8A29",
+      corSecundaria: "#FFEEDF",
+    },
+    {
+      nome: "Sobrenatural",
       corPrimaria: "#FF8A29",
       corSecundaria: "#FFEEDF",
     },
@@ -46,7 +87,8 @@ function App() {
   const [colaboradores, setColaboradores] = useState([]);
 
   useEffect(() => {
-    const dadosLocalStorage = JSON.parse(localStorage.getItem('colaboradores')) || [];
+    const dadosLocalStorage =
+      JSON.parse(localStorage.getItem("colaboradores")) || [];
     setColaboradores(dadosLocalStorage);
   }, []);
 
@@ -74,6 +116,8 @@ function App() {
         times={times.map((time) => time.nome)}
       />
 
+      <Adicionar />
+
       {times.map((time) => {
         return (
           <Time
@@ -89,7 +133,7 @@ function App() {
         );
       })}
 
-      <Rodape autor={"Desenvolvido por Alura"} />
+      <Rodape autor={"Desenvolvido por João Metzdorf."} />
     </div>
   );
 }

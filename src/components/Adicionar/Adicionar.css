@@ -1,0 +1,38 @@
+.adicionar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 80px 0;
+
+  div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    h2 {
+      font-size: 2.5rem;
+      color: #6278f7;
+      margin: 0 0 0.5rem 0;
+    }
+    .border__bottom--adicionar {
+      width: 64px;
+      height: 4px;
+      background-color: #6278f7;
+    }
+  }
+}
+
+.button__adicionar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: 1440px;
+    margin-bottom: 80px;
+    margin-top: -170px;
+
+    button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+}
