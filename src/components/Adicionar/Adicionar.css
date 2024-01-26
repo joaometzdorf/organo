@@ -11,13 +11,13 @@
 
     h2 {
       font-size: 2.5rem;
-      color: #6278f7;
+      color: #FCE561;
       margin: 0 0 0.5rem 0;
     }
     .border__bottom--adicionar {
       width: 64px;
       height: 4px;
-      background-color: #6278f7;
+      background-color: #FCE561;
     }
   }
 }

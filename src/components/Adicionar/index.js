@@ -23,8 +23,8 @@ const Adicionar = () => {
       <div className="button__adicionar">
           <button onClick={adicionarCard}>
             <img
-              src="/images/botao-add.png"
-              alt="Botão para adicionar um novo personagem"
+              src="/images/botao-add.svg"
+              alt="Botão de adicionar card"
             />
           </button>
         </div>
