@@ -31,7 +31,7 @@ const Formulario = (props) => {
     setCargo("");
     setImagem("");
     setTime("");
-    document.querySelector("form").classList.add("hidden")
+    document.querySelector(".formulario").classList.add("hidden")
   };
 
   return (
