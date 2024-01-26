@@ -5,7 +5,6 @@ const ListaSuspensa = (props) => {
     <div className="lista-suspensa">
       <label>{props.label}</label>
       <select
-        defaultValue={""}
         onChange={(e) => props.aoAlterado(e.target.value)}
         required={props.obrigatorio}
         value={props.valor}

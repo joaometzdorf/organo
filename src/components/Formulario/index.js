@@ -12,12 +12,21 @@ const Formulario = (props) => {
 
   const aoSalvar = (e) => {
     e.preventDefault();
-    props.aoColaboradorCadastrado({
+    const novoColaborador = {
       nome,
       cargo,
       imagem,
       time,
-    });
+    };
+
+    const colaboradoresLocalStorage =
+      JSON.parse(localStorage.getItem("colaboradores")) || [];
+    localStorage.setItem(
+      "colaboradores",
+      JSON.stringify([...colaboradoresLocalStorage, novoColaborador])
+    );
+
+    props.aoColaboradorCadastrado(novoColaborador);
     setNome("");
     setCargo("");
     setImagem("");

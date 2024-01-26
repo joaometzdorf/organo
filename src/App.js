@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Banner from "./components/Banner";
 import Formulario from "./components/Formulario";
 import Time from "./components/Time";
@@ -45,8 +45,23 @@ function App() {
 
   const [colaboradores, setColaboradores] = useState([]);
 
+  useEffect(() => {
+    const dadosLocalStorage = JSON.parse(localStorage.getItem('colaboradores')) || [];
+    setColaboradores(dadosLocalStorage);
+  }, []);
+
   const aoNovoColaboradorAdicionado = (colaborador) => {
     setColaboradores([...colaboradores, colaborador]);
+  };
+
+  const aoDeletarColaborador = (nomeColaborador) => {
+    const novosColaboradores = colaboradores.filter(
+      (colaborador) => colaborador.nome !== nomeColaborador
+    );
+
+    localStorage.setItem("colaboradores", JSON.stringify(novosColaboradores));
+
+    setColaboradores(novosColaboradores);
   };
 
   return (
@@ -66,12 +81,15 @@ function App() {
             nome={time.nome}
             corPrimaria={time.corPrimaria}
             corSecundaria={time.corSecundaria}
-            colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+            colaboradores={colaboradores.filter(
+              (colaborador) => colaborador.time === time.nome
+            )}
+            aoDeletarColaborador={aoDeletarColaborador}
           />
         );
       })}
 
-      <Rodape autor={'Desenvolvido por Alura'} />
+      <Rodape autor={"Desenvolvido por Alura"} />
     </div>
   );
 }

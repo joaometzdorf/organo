@@ -10,16 +10,20 @@ const Time = (props) => {
       >
         <h3>
           {props.nome}
-          <div style={{ backgroundColor: props.corPrimaria }} className="border__bottom"></div>
+          <div
+            style={{ backgroundColor: props.corPrimaria }}
+            className="border__bottom"
+          ></div>
         </h3>
         <div className="colaboradores">
-          {props.colaboradores.map((colaborador) => (
+        {props.colaboradores.map((colaborador) => (
             <Colaborador
               corDeFundo={props.corPrimaria}
               nome={colaborador.nome}
               cargo={colaborador.cargo}
               imagem={colaborador.imagem}
               key={colaborador.nome}
+              aoDeletar={() => props.aoDeletarColaborador(colaborador.nome)}
             />
           ))}
         </div>
