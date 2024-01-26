@@ -133,7 +133,7 @@ function App() {
         );
       })}
 
-      <Rodape autor={"Desenvolvido por João Metzdorf."} />
+      <Rodape autor={"Desenvolvido por Alura e João Metzdorf."} />
     </div>
   );
 }

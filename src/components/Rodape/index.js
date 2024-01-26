@@ -4,14 +4,14 @@ const Rodape = (props) => {
   return (
     <footer className="footer">
       <div className="footer__sociais">
-        <a href="https://www.facebook.com">
-          <img src="/images/fb.png" alt="Logo do Facebook" />
+        <a href="https://github.com/joaometzdorf">
+          <img src="/images/github.svg" alt="Logo do GitHub" />
         </a>
-        <a href="https://www.instagram.com">
+        <a href="https://www.instagram.com/joaometzdorf/">
           <img src="/images/ig.png" alt="Logo do Instagram" />
         </a>
-        <a href="https://www.x.com">
-          <img src="/images/tw.png" alt="Logo do Twitter" />
+        <a href="https://www.linkedin.com/in/joaometzdorf/">
+          <img src="/images/linkedin.svg" alt="Logo do Linkedin" />
         </a>
       </div>
 
