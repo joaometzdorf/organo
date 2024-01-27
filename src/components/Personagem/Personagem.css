@@ -1,13 +1,13 @@
-.colaborador {
+.personagem {
   width: 280px;
   margin-top: 1rem;
 }
 
-.colaborador .cabecalho {
+.personagem .cabecalho {
   background-color: #f0f0f0;
   border-radius: 10px 10px 0px 0px;
 }
-.colaborador img {
+.personagem img {
   min-width: 100px;
   max-width: 100px;
   border-radius: 50%;
@@ -18,32 +18,32 @@
   object-fit: cover;
 }
 
-.colaborador .rodape {
+.personagem .rodape {
   background: #ffffff;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
   border-radius: 0px 0px 10px 10px;
   padding-top: 50px;
 }
 
-.colaborador .rodape h4 {
+.personagem .rodape h4 {
   font-size: 18px;
   line-height: 22px;
   font-weight: bold;
   margin-bottom: 8px;
 }
 
-.colaborador .rodape h5 {
+.personagem .rodape h5 {
   margin: 0;
   padding: 0;
 }
-.colaborador .rodape h5 {
+.personagem .rodape h5 {
   font-size: 18px;
   line-height: 22px;
   color: #212121;
   font-weight: 500;
 }
 
-.colaborador .rodape .btn__deletar {
+.personagem .rodape .btn__deletar {
   width: 100%;
   display: flex;
   flex-direction: row-reverse;

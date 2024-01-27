@@ -6,31 +6,31 @@ import "./Formulario.css";
 
 const Formulario = (props) => {
   const [nome, setNome] = useState("");
-  const [cargo, setCargo] = useState("");
+  const [anime, setAnime] = useState("");
   const [imagem, setImagem] = useState("");
-  const [time, setTime] = useState("");
+  const [categoria, setCategoria] = useState("");
 
   const aoSalvar = (e) => {
     e.preventDefault();
-    const novoColaborador = {
+    const novoPersonagem = {
       nome,
-      cargo,
+      anime,
       imagem,
-      time,
+      categoria,
     };
 
-    const colaboradoresLocalStorage =
-      JSON.parse(localStorage.getItem("colaboradores")) || [];
+    const personagensLocalStorage =
+      JSON.parse(localStorage.getItem("personagens")) || [];
     localStorage.setItem(
-      "colaboradores",
-      JSON.stringify([...colaboradoresLocalStorage, novoColaborador])
+      "personagens",
+      JSON.stringify([...personagensLocalStorage, novoPersonagem])
     );
 
-    props.aoColaboradorCadastrado(novoColaborador);
+    props.aoPersonagemCadastrado(novoPersonagem);
     setNome("");
-    setCargo("");
+    setAnime("");
     setImagem("");
-    setTime("");
+    setCategoria("");
     document.querySelector(".formulario").classList.add("hidden")
   };
 
@@ -49,8 +49,8 @@ const Formulario = (props) => {
           obrigatorio={true}
           label="Anime"
           placeholder="Digite o anime que ele participa"
-          valor={cargo}
-          aoAlterado={(valor) => setCargo(valor)}
+          valor={anime}
+          aoAlterado={(valor) => setAnime(valor)}
         />
         <CampoTexto
           obrigatorio={true}
@@ -62,9 +62,9 @@ const Formulario = (props) => {
         <ListaSuspensa
           obrigatorio={true}
           label="Gênero"
-          itens={props.times}
-          valor={time}
-          aoAlterado={(valor) => setTime(valor)}
+          itens={props.categorias}
+          valor={categoria}
+          aoAlterado={(valor) => setCategoria(valor)}
         />
         <Botao>Criar Card</Botao>
       </form>

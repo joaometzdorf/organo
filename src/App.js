@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import Banner from "./components/Banner";
 import Formulario from "./components/Formulario";
-import Time from "./components/Time";
+import Categoria from "./components/Categoria";
 import Rodape from "./components/Rodape";
 import Adicionar from "./components/Adicionar";
 
 function App() {
-  const times = [
+  const categorias = [
     {
       nome: "Romance",
       corPrimaria: "#ff66b2",
@@ -84,51 +84,51 @@ function App() {
     },
   ];
 
-  const [colaboradores, setColaboradores] = useState([]);
+  const [personagens, setPersonagens] = useState([]);
 
   useEffect(() => {
     const dadosLocalStorage =
-      JSON.parse(localStorage.getItem("colaboradores")) || [];
-    setColaboradores(dadosLocalStorage);
+      JSON.parse(localStorage.getItem("personagens")) || [];
+    setPersonagens(dadosLocalStorage);
   }, []);
 
-  const aoNovoColaboradorAdicionado = (colaborador) => {
-    setColaboradores([...colaboradores, colaborador]);
+  const aoNovoPersonagemAdicionado = (personagem) => {
+    setPersonagens([...personagens, personagem]);
   };
 
-  const aoDeletarColaborador = (nomeColaborador) => {
-    const novosColaboradores = colaboradores.filter(
-      (colaborador) => colaborador.nome !== nomeColaborador
+  const aoDeletarPersonagem = (nomePersonagem) => {
+    const novosPersonagens = personagens.filter(
+      (personagem) => personagem.nome !== nomePersonagem
     );
 
-    localStorage.setItem("colaboradores", JSON.stringify(novosColaboradores));
+    localStorage.setItem("personagens", JSON.stringify(novosPersonagens));
 
-    setColaboradores(novosColaboradores);
+    setPersonagens(novosPersonagens);
   };
 
   return (
     <div className="App">
       <Banner />
       <Formulario
-        aoColaboradorCadastrado={(colaborador) =>
-          aoNovoColaboradorAdicionado(colaborador)
+        aoPersonagemCadastrado={(personagem) =>
+          aoNovoPersonagemAdicionado(personagem)
         }
-        times={times.map((time) => time.nome)}
+        categorias={categorias.map((time) => time.nome)}
       />
 
       <Adicionar />
 
-      {times.map((time) => {
+      {categorias.map((categoria) => {
         return (
-          <Time
-            key={time.nome}
-            nome={time.nome}
-            corPrimaria={time.corPrimaria}
-            corSecundaria={time.corSecundaria}
-            colaboradores={colaboradores.filter(
-              (colaborador) => colaborador.time === time.nome
+          <Categoria
+            key={categoria.nome}
+            nome={categoria.nome}
+            corPrimaria={categoria.corPrimaria}
+            corSecundaria={categoria.corSecundaria}
+            personagens={personagens.filter(
+              (personagem) => personagem.categoria === categoria.nome
             )}
-            aoDeletarColaborador={aoDeletarColaborador}
+            aoDeletarPersonagem={aoDeletarPersonagem}
           />
         );
       })}
