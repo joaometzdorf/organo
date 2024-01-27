@@ -23,3 +23,21 @@
 .campo-texto input::placeholder {
   color: #afafaf;
 }
+
+@media (max-width: 500px) { 
+  .campo-texto input {
+    font-size: .85rem;
+    padding: 1.875rem 1.5rem;
+  }
+  
+  .campo-texto input::placeholder {
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 375px) {
+  .campo-texto input {
+    font-size: .75rem;
+    padding: 1.875rem 1.5rem;
+  }
+}

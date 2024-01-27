@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   margin: 5rem 0;
+  animation: slidein .6s ease-out
 }
 
 .formulario form {
@@ -19,4 +20,36 @@
 
 .hidden {
   display: none;
+}
+
+@keyframes slidein {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@media (max-width: 600px) {
+  .formulario form {
+    max-width: 70%;
+    padding: 1rem 4rem;
+  }
+  
+  .formulario form h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 450px) { 
+  .formulario form {
+    max-width: 70%;
+    padding: 1rem 3rem;
+  }
+  
+  .formulario form h2 {
+    font-size: 1.2rem;
+  }
 }

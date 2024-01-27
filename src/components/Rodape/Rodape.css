@@ -2,19 +2,69 @@
     background-color: #FCE561;
     background-image: url(../../../public/images/Rodapé.png);
     width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     padding: 75px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .footer .footer__sociais {
     display: flex;
     gap: 2rem;
+    margin-left: 10rem;
+}
+
+.footer .footer__sociais a:hover {
+    scale: 1.2;
+    transition: scale .7s;
+}
+
+.footer__logo {
+    margin-left: 13rem;
 }
 
 .footer__autor {
     font-size: 1.25rem;
     font-weight: 500;
     color: #FFFFFF;
+    margin-right: 10rem;
+}
+
+@media (max-width: 1280px) {
+
+    .footer .footer__sociais {
+        margin-left: 5rem;
+    }
+
+    .footer__logo {
+        margin-left: 12rem;
+    }
+    
+    .footer__autor {
+        margin-right: 5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer {
+        padding: 2rem 0;
+        gap: 2rem;
+        flex-direction: column;
+    }
+
+    .footer .footer__sociais {
+        margin: 0;
+    }
+    .footer__logo {
+        margin: 0;
+    }
+    .footer__autor {
+        margin: 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .footer__autor {
+        text-align: center;
+    }
 }

@@ -11,28 +11,88 @@
 
     h2 {
       font-size: 2.5rem;
-      color: #FCE561;
+      color: #fce561;
       margin: 0 0 0.5rem 0;
     }
     .border__bottom--adicionar {
       width: 64px;
       height: 4px;
-      background-color: #FCE561;
+      background-color: #fce561;
     }
   }
 }
 
 .button__adicionar {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    max-width: 1440px;
-    margin-bottom: 80px;
-    margin-top: -170px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: -170px 200px 80px 0;
+  max-width: 1440px;
+
+  button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: scale 0.7s;
+  }
+  button:hover {
+    scale: 1.2;
+  }
+}
+
+@media (max-width: 1024px) {
+  .adicionar {
+    div {
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .button__adicionar {
+    margin: -170px 50px 80px 0;
 
     button {
-        border: none;
-        background-color: transparent;
-        cursor: pointer;
+      transition: scale 0.7s;
     }
+    button:hover {
+      scale: 1;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .adicionar {
+    div {
+      h2 {
+        font-size: 1.7rem;
+      }
+    }
+  }
+
+  .button__adicionar {
+    margin: -135px 50px 80px 0;
+    button {
+      img {
+        min-height: 50px;
+        max-height: 55px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .adicionar {
+    div {
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  .button__adicionar {
+    margin: -135px 20px 80px 0;
+  }
 }

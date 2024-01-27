@@ -59,3 +59,8 @@
   cursor: pointer;
   border-radius: 0.3rem;
 }
+
+.btn__deletar button:hover {
+  color: #000000;
+  transition: color .7s;
+}
