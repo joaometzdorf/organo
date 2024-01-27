@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import './index.css'
 import Banner from "./components/Banner";
 import Formulario from "./components/Formulario";
 import Categoria from "./components/Categoria";

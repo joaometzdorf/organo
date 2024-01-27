@@ -1,98 +1,56 @@
 .adicionar {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 80px 0;
-
-  div {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-    h2 {
-      font-size: 2.5rem;
-      color: #fce561;
-      margin: 0 0 0.5rem 0;
-    }
-    .border__bottom--adicionar {
-      width: 64px;
-      height: 4px;
-      background-color: #fce561;
-    }
-  }
+  justify-content: space-evenly;
+  padding: 5rem 0;
 }
 
-.button__adicionar {
+.adicionar__titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.adicionar__titulo h2 {
+  color: #FCE561;
+  font-size: 2.5rem;
+  margin: 1.1rem 0 2rem 0;
+  text-align: center;
+}
+
+.adicionar__titulo .borda {
+  background-color: #FCE561;
+  width: 64px;
+  height: 4px;
+  margin-top: -1.25rem;
+}
+
+.adicionar__botao {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  margin: -170px 200px 80px 0;
-  max-width: 1440px;
-
-  button {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    transition: scale 0.7s;
-  }
-  button:hover {
-    scale: 1.2;
-  }
 }
 
-@media (max-width: 1024px) {
-  .adicionar {
-    div {
-      h2 {
-        font-size: 2rem;
-      }
-    }
-  }
+.adicionar__botao button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: scale .7s;
 }
 
-@media (max-width: 800px) {
-  .button__adicionar {
-    margin: -170px 50px 80px 0;
-
-    button {
-      transition: scale 0.7s;
-    }
-    button:hover {
-      scale: 1;
-    }
-  }
+.adicionar__botao button:hover {
+  scale: 1.1;
 }
 
-@media (max-width: 600px) {
-  .adicionar {
-    div {
-      h2 {
-        font-size: 1.7rem;
-      }
-    }
+@media (min-width: 375px) and (max-width: 600px){
+  .adicionar__titulo h2 {
+    font-size: 2rem;
   }
 
-  .button__adicionar {
-    margin: -135px 50px 80px 0;
-    button {
-      img {
-        min-height: 50px;
-        max-height: 55px;
-      }
-    }
-  }
-}
-
-@media (max-width: 500px) {
-  .adicionar {
-    div {
-      h2 {
-        font-size: 1.3rem;
-      }
-    }
+  .adicionar__botao {
+    margin-top: 1rem;
   }
 
-  .button__adicionar {
-    margin: -135px 20px 80px 0;
+  .adicionar__botao button img {
+    max-height: 50px;
+    max-width: 50px;
   }
 }

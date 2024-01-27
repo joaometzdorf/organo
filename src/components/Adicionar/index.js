@@ -1,34 +1,29 @@
 import "./Adicionar.css";
 
 const Adicionar = () => {
-
   const adicionarCard = () => {
-    const form = document.querySelector(".formulario")
+    const form = document.querySelector(".formulario");
 
-    if(form.classList.contains("hidden")) {
-      form.classList.remove("hidden")
+    if (form.classList.contains("hidden")) {
+      form.classList.remove("hidden");
     } else {
-      form.classList.add("hidden")
+      form.classList.add("hidden");
     }
-  }
+  };
 
   return (
-    <>
-      <section className="adicionar">
-        <div>
-          <h2>Meus Personagens:</h2>
-          <div className="border__bottom--adicionar"></div>
-        </div>
-      </section>
-      <div className="button__adicionar">
-          <button onClick={adicionarCard}>
-            <img
-              src="/images/botao-add.svg"
-              alt="Botão de adicionar card"
-            />
-          </button>
-        </div>
-    </>
+    <section className="adicionar">
+      <div className="vazio"></div>
+      <div className="adicionar__titulo">
+        <h2>Meus Personagens:</h2>
+        <div className="borda"></div>
+      </div>
+      <div className="adicionar__botao">
+        <button onClick={adicionarCard}>
+          <img src="/images/botao-add.svg" alt="Botão de adicionar card" />
+        </button>
+      </div>
+    </section>
   );
 };
 
